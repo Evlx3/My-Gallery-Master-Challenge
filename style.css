@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/* || Reset Styles */
+
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Utility Classes */
+
+.ofscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/* || Container Styles */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1.2em;
+  padding: 1em;
+}
+
+/* || Header Styles */
+
+.header {
+  display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.header-figure {
+  position: relative;
+  width: calc(100px + 6vw);
+}
+
+.header-figure img {
+  border-radius: 1em;
+}
+
+.header-h2 {
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  color: #4e5150;
+}
+
+.header-p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #a9a9a9;
+}
+
+.header-status {
+  display: flex;
+  gap: 1em;
+}
+
+.status-container {
+  width: calc(70px + 4vw);
+  height: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+  margin-top: 1em;
+  border-radius: 1em;
+  background-color: #bdbdbd;
+}
+
+.status-value {
+  color: #4e5150;
+}
+
+.status-title {
+  color: #7a7979;
+}
+
+/* || Main Styles */
+
+main {
+  width: 100%;
+}
+
+.items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-areas:
+    "item1 item2 item2"
+    "item3 item3 item4"
+    "item5 item6 item4";
+  gap: 0.8em;
+}
+
+.items img {
+  width: 100%;
+  min-height: 100%;
+  /* height: auto;  Let the images maintain their aspect ratio  */
+  border-radius: 1em;
+}
+
+.items img:nth-child(1) {
+  grid-area: item1;
+}
+
+.items img:nth-child(2) {
+  grid-area: item2;
+}
+
+.items img:nth-child(3) {
+  grid-area: item3;
+}
+
+.items img:nth-child(4) {
+  grid-area: item4;
+}
+
+.items img:nth-child(5) {
+  grid-area: item5;
+}
+
+.items img:nth-child(6) {
+  grid-area: item6;
+}
+
+/* || Footer Styles */
+
+.footer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #828282;
+}
+
+@media (min-width: 556px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
