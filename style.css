@@ -74,7 +74,7 @@ html {
 }
 
 .status-container {
-  width: calc(70px + 4vw);
+  width: calc(75px + 4vw);
   height: 60px;
   display: flex;
   flex-flow: column nowrap;
@@ -145,11 +145,11 @@ main {
 /* || Footer Styles */
 
 .footer {
-  margin-top: 1em;
+  margin: 1em 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #828282;
 }
 
